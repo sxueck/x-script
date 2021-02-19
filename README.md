@@ -10,8 +10,8 @@
 
 使用方法：  
 ```shell
-curl s.sxueck.link/l/docker | bash - # 无参数
-curl s.sxueck.link/l/k8s/pnode | bash -s -- development # 带有传入参数
+curl s.sxueck.link/l/docker -sL | bash - # 无参数
+curl s.sxueck.link/l/k8s/pnode -sL | bash -s -- development # 带有传入参数
 ```
 
 ### 记录
