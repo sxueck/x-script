@@ -6,6 +6,7 @@ before_install:
   - ./ossutil64 config -e "${OSS_ENDPOINT}" -i "${OSS_AKI}" -k "${OSS_AKS}"
 
 script:
+  - ls -al
   - bash -n l/*
 
 after_success:
