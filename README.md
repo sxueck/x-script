@@ -10,3 +10,6 @@
 ```shell
 curl s.sxueck.link/l/docker | bash -
 ```
+
+### 记录
+* l/docker : 默认使用阿里云作为安装源，添加阿里云作为加速镜像器
