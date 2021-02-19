@@ -10,8 +10,10 @@
 
 使用方法：  
 ```shell
-curl s.sxueck.link/l/docker | bash -
+curl s.sxueck.link/l/docker | bash - # 无参数
+curl s.sxueck.link/l/k8s/pnode | bash -s -- development # 带有传入参数
 ```
 
 ### 记录
-* l/docker : 默认使用阿里云作为安装源，添加阿里云作为加速镜像器
+* l/docker : Docker 安装脚本，默认使用阿里云作为安装源，添加阿里云作为加速镜像器
+* l/k8s/pnode: 列出每个 Pods 所在的 Node
