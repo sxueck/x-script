@@ -1,5 +1,7 @@
 # X-Script
 
+[![Build Status](https://travis-ci.com/sxueck/x-script.svg?branch=main)](https://travis-ci.com/sxueck/x-script)
+
 这是一个快捷脚本仓库，包含了我个人定制或者魔改的一些基础操作，目录说明
 
 `l`: linux  

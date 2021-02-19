@@ -10,6 +10,5 @@ script:
   - bash -n l/*
 
 after_success:
-  - zip -r shell.zip ./*
   - ./ossutil64 rm oss://x1-script/ -r -f
-  - ./ossutil64 cp -f shell.zip oss://x1-script/
+  - ./ossutil64 cp -rf l/* oss://x1-script/l/
