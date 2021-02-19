@@ -3,7 +3,7 @@
 namespace=$1
 if [ ! -n "$namespace" ];then
     echo "your can use"
-    echo "./pnode.sh namespace"
+    echo "./pnode namespace"
     namespace="default"
 fi
 
@@ -20,8 +20,10 @@ obtain_pods_nodes() {
     podsName=$(kubectl get pods -n $namespace | awk 'NR == 1 {next} {print $1}')
     for i in $podsName
     do
-        node=$(kubectl describe pods -n $namespace $i | grep Node: | awk '{print $2}' | awk -F '/' '{print $1}')
-        echo "$i / $node";
+        describe=$(kubectl describe pods -n "$namespace" "$i")
+        node=$(echo "$describe" | grep "Node:" | awk '{print $2}' | awk -F '/' '{print $1}')
+        status=$(echo "$describe" | grep "Status:" | awk '{print $2}')
+        echo "$i / $node / $status";
     done
 }
 
