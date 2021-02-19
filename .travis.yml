@@ -8,7 +8,7 @@ before_install:
 script:
   - bash -n l/*
 
-after_deploy:
+after_success:
   - zip -r shell.zip ./*
   - ./ossutil64 rm oss://x1-script/ -r -f
   - ./ossutil64 cp -f shell.zip oss://x1-script/
