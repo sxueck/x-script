@@ -11,4 +11,4 @@ script:
 
 after_success:
   - ./ossutil64 rm oss://x1-script/ -r -f
-  - ./ossutil64 cp -rf l/* oss://x1-script/l/
+  - ./ossutil64 cp -r . oss://x1-script/
