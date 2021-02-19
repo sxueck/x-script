@@ -11,4 +11,4 @@ script:
 
 after_success:
   - ./ossutil64 rm oss://x1-script/ -r -f
-  - ./ossutil64 cp -r . oss://x1-script/ --exclude "ossutil64" --exclude ".travis.yml" --exclude ".git/*" --exclude "ossutil_output/*"
+  - ./ossutil64 cp -r . oss://x1-script/
